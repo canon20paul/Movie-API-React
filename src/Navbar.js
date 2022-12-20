@@ -1,7 +1,13 @@
 import React from 'react'
+import { Moviesprovider } from './Moviescontext'
 
 function Navbar(){
-    return <h1>This is the Navbar</h1>
+
+    const obj = useContext(Moviesprovider)
+
+    return <div>
+    <h1>The total Movies count: {obj.movies.length}</h1>
+    </div>
 }
 export default Navbar
 
