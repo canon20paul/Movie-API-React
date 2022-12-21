@@ -14,7 +14,7 @@ function Movieslisted() {
 
     })
 
-    return <div>
+    return <div style={{backgroundColor:'green'}}>
         <h1>Movie List</h1>
             {movieslist}
     </div>

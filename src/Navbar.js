@@ -5,7 +5,7 @@ function Navbar(){
 
     const obj = useContext(Moviesprovider)
 
-    return <div>
+    return <div style={{ backgroundColor: 'teal' }}>
     <h1>The total Movies count: {obj.movies.length}</h1>
     </div>
 }
