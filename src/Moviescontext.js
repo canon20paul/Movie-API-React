@@ -2,7 +2,7 @@ import React, {Component,createContext} from 'react'
 
 export const Moviesprovider = createContext()
 
-class Moviescontext extends React.Component(){
+class Moviescontext extends React.Component{
 
 constructor(){
     super()
@@ -12,17 +12,18 @@ constructor(){
     }
 }
 
-addmovie=()=>{
-
+addmovie=(movie)=>{
+    this.setState({movies:[...this.state.movies, movie]})
 }
 
 
     render(){
-        return <Moviesprovider.provide>
+        return <Moviesprovider.Provider value={{...this.state}}>
+                {this.props.Children}
 
-
-                </Moviesprovider.provide>
+                </Moviesprovider.Provider>
 
 
     }
 }
+export default Moviescontext
